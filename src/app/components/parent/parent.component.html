@@ -1,0 +1,12 @@
+<div id="pdiv">
+  <h3>Parent Component</h3>
+  <label>
+    Favourite Dish: <input type="text" [(ngModel)]="favDish">
+  </label>
+  &nbsp;
+  <button (click)="sendData2Child()">Send to Child</button>
+  <p></p>
+  Child Favourite Country: {{childFavCountry}}
+  <app-child parentFavDish="{{favDish4Child}}"
+             (countryEvent)="handleEvent($event)"></app-child>
+</div>
